@@ -524,10 +524,8 @@ struct ReadData {
     bool mismatch;
     bool fileListMode;
     bool floatOutput;
-    int cachedFrameNum;
     bool cachedAlpha;
     bool embedICC;
-    const VSFrame *cachedFrame;
 
     ReadData() : fileListMode(true) {};
 };
