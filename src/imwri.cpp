@@ -387,6 +387,7 @@ static void VS_CC writeFree(void *instanceData, VSCore *core, const VSAPI *vsapi
     vsapi->freeNode(d->videoNode);
     vsapi->freeNode(d->alphaNode);
     delete d;
+    Magick::TerminateMagick();
 }
 
 static void VS_CC writeCreate(const VSMap *in, VSMap *out, void *userData, VSCore *core, const VSAPI *vsapi) {
@@ -754,6 +755,7 @@ static const VSFrame *VS_CC readGetFrame(int n, int activationReason, void *inst
 static void VS_CC readFree(void *instanceData, VSCore *core, const VSAPI *vsapi) {
     ReadData *d = static_cast<ReadData *>(instanceData);
     delete d;
+    Magick::TerminateMagick();
 }
 
 static void VS_CC readCreate(const VSMap *in, VSMap *out, void *userData, VSCore *core, const VSAPI *vsapi) {
