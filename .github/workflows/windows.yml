@@ -36,6 +36,7 @@ jobs:
           mingw-w64-${{matrix.env}}-meson
           mingw-w64-${{matrix.env}}-toolchain
           mingw-w64-${{matrix.env}}-zimg
+          mingw-w64-${{matrix.env}}-gflags
           autoconf
           automake
           libtool
