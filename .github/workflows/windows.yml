@@ -37,6 +37,8 @@ jobs:
           mingw-w64-${{matrix.env}}-toolchain
           mingw-w64-${{matrix.env}}-zimg
           autoconf
+          automake
+          libtool
 
     - name: Install VapourSynth
       run: |
